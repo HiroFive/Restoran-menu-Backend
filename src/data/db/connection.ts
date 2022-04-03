@@ -6,7 +6,7 @@ const db = process.env.NODE_ENV === 'test' ? config.test : config.development;
 const sequelize = new Sequelize({
   ...db,
   port: Number(db.port),
-  dialect: db.dialect as Dialect,
+  dialect: 'postgres',
   logging: false,
 });
 
