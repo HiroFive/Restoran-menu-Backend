@@ -1,0 +1,136 @@
+Food:
+  /food:
+    get:
+      summary: Get a food
+      tags:
+        - Food
+      description: |-
+        Get all a food
+      responses:
+        "200":
+          description: Obtained all a food
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Foods'
+        "400":
+          $ref: '#/components/responses/400BadRequest'
+    post:
+      summary: Creates new food
+      tags:
+        - Food
+      description: |-
+        Creates new food
+      requestBody:
+        description: food info
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Food'
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Food'
+        "400":
+          $ref: '#/components/responses/400BadRequest'
+  /food?{params}:
+    get:
+      summary: Get a food by params
+      tags:
+        - Food
+      description: |-
+        Get all a food by param
+      responses:
+        "200":
+          description: Obtained all a food by param
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Foods'
+        "400":
+          $ref: '#/components/responses/400BadRequest'
+  /food/category?{params}&role={role}:
+    get:
+      summary: Get a food with category by params
+      tags:
+        - Food
+      description: |-
+        Obtained a category with food
+      parameters:
+        - in: path
+          name: role
+          schema:
+            type: string
+          name: params
+          schema: 
+            type: string
+      responses:
+        "200":
+          description: Obtained food with category
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodWithCategory'
+        "400":
+          $ref: '#/components/responses/400BadRequest'
+  /food/{foodId}:
+    get:
+      summary: Get a food
+      tags:
+        - Food
+      description: |-
+        Obtained a food with corresponding food id
+      parameters:
+        - in: path
+          name: foodId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Obtained real estate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Food'
+        "400":
+          $ref: '#/components/responses/400BadRequest'
+    put:
+      summary: Updates a food
+      tags:
+        - Food
+      description: |-
+        Updates a food with corresponding food by id
+      parameters:
+        - in: path
+          name: foodId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Food was updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Food'
+        '400':
+          $ref: '#/components/responses/400BadRequest'
+    delete:
+      summary: Deletes existing food
+      tags:
+        - Food
+      description: |-
+        Delete a food by Id
+      parameters:
+        - in: path
+          name: foodId
+          schema:
+            type: string
+      responses:
+        '204':
+          description: 'The permission was deleted successfully'
+        '400':
+          $ref: '#/components/responses/400BadRequest'

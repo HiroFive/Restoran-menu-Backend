@@ -1,0 +1,20 @@
+Categories:
+  type: array
+  items: 
+    type: object
+    properties:
+      id:
+        type: string
+        nullable: false
+      title:
+        type: string
+        nullable: false
+        unique: true
+      hidden:
+        type: boolean
+        nullable: false
+      parentId:
+        type: string
+        nullable: true
+  xml:
+    name: Categories

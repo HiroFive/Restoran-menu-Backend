@@ -1,0 +1,9 @@
+400BadRequest:
+  description: Something is not right
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          msg:
+            type: string

@@ -1,0 +1,13 @@
+401Unauthorized:
+  description: JWT is invalid or absent
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          ok:
+            type: boolean
+          status:
+            type: number
+          message:
+            type: string

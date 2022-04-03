@@ -1,0 +1,39 @@
+Info:
+  /info:
+    get:
+      summary: Get a restaurant info
+      tags:
+        - Info
+      description: |-
+        Get restaurant info
+      responses:
+        "200":
+          description: Obtained restaurant info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+        "400":
+          $ref: '#/components/responses/400BadRequest'
+    patch:
+      summary: Update restaurant info
+      tags:
+        - Info
+      description: |-
+        Update restaurant info
+      requestBody:
+        description: restaurant info
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Info'
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+        "400":
+          $ref: '#/components/responses/400BadRequest'

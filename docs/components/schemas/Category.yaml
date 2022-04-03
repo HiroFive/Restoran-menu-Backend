@@ -1,0 +1,15 @@
+Category:
+  type: object
+  properties:
+    title:
+      type: string
+      nullable: false
+      unique: true
+    hidden:
+      type: boolean
+      nullable: false
+    parentId:
+      type: string
+      nullable: true
+  xml:
+    name: Category

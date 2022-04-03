@@ -1,0 +1,31 @@
+Food:
+  type: object
+  properties:
+    name:
+      type: string
+      nullable: false
+      unique: true
+    description:
+      type: string
+      nullable: false
+    hidden:
+      type: boolean
+      nullable: false
+    categoryId:
+      type: string
+      nullable: true
+    image:
+      type: string
+      nullable: false
+    portions:
+      type: array
+      nullable: false
+      items:
+        type: object
+        properties:
+          price:
+            type: number
+          weight:
+            type: number
+  xml:
+    name: Food

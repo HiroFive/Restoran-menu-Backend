@@ -1,0 +1,14 @@
+Info:
+  type: object
+  properties:
+    address:
+      type: string
+      nullable: true
+    contacts:
+      type: string
+      nullable: true
+    wifiPassword:
+      type: string
+      nullable: true
+  xml:
+    name: Info

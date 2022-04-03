@@ -1,0 +1,9 @@
+tags:
+  - name: Example
+    description: Use this as a reference to create new routes
+  - name: Category
+    description: Dishes category
+  - name: Food
+    description: Dishes in restaurant
+  - name: Info
+    description: Restaurant of Info

@@ -1,0 +1,18 @@
+info:
+  title: Restaurant Documentation
+  description: |-
+    So this is a document that should be updated with each new route/functionality.
+    We have 3 folders: meta, routes, components
+    - `meta` folder contains special informational blocks such as *info* or *tags*
+    - `routes` folder contains route information. One tag per file. For example *User.yaml* has all routes under *User* tag.
+    - `components` contains reusable pieces of docs. Folders are:
+      - schemas: models of data
+      - responses
+      - requests
+      - security
+      - ...
+    If you want to add new meta file, you will need to add it's name to the `finalDefinition`
+    If you want to add new route or component, just add a new file that *has the same structure* as others in that folder.
+    ---
+    Feel free to change it, but before that, check the [documentation](https://swagger.io/docs/specification/about/)
+  version: 1.0.0
